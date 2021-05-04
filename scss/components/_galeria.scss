@@ -1,0 +1,39 @@
+@use '../globales' as * ;
+
+.galeria{
+    width: 50%;
+    height: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    @include caja;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &.galeria__foto-principal{
+        float: left;
+        margin-right: 10px;
+    }
+
+    &__fotos-adicionales{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 170px;
+        max-width: 170px;
+    
+        padding: 10px;
+        margin-top: 40px;
+    }
+    h2{
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 20px;
+		@include titulos($Fuente2);
+        
+    }
+    img{
+        border-radius: 10px;
+    }
+}
